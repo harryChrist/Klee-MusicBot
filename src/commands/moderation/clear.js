@@ -17,6 +17,7 @@ module.exports = class extends Command {
     }
 
     run = async (interaction) => {
+        if (!interaction.member.permissions.has('MANAGE_MESSAGES')) return interaction.reply({ content: 'Você precisa de permissão para expulsar membros no servidor.', ephemeral: true })
         const amount = interaction.options.getNumber("amount")
         if(amount < 0 || amount > 100) return interaction.reply({
             content: "Só posso remover até 100 mensagens..",
