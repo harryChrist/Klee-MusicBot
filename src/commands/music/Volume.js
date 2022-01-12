@@ -10,7 +10,9 @@ module.exports = class extends Command {
                     name: 'volume',
                     type: 'NUMBER',
                     description: 'Diga o volume desejado [0 a 100]%. (Normal: 50%)',
-                    required: true
+                    required: true,
+                    min_value: 0,
+                    max_value: 100
                 }
             ]
         })
