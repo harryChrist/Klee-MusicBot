@@ -23,7 +23,7 @@ module.exports = class extends Client {
 
     registryCommands() {
         // temporária
-        //this.guilds.cache.get('884413878119829577').commands.set(this.commands)
+        this.guilds.cache.get('654375015655145485').commands.set(this.commands)
         this.application.commands.set(this.commands)
     }
 
