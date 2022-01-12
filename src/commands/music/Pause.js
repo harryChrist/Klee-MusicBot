@@ -6,6 +6,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'pause',
             description: 'Pausa a reprodução.',
+            default_permission:false
         })
     }
 

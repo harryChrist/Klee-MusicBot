@@ -5,6 +5,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'stop',
             description: 'Para todas as reproduções.',
+            default_permission:false,
         })
     }
 

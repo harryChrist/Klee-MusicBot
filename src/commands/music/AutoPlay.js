@@ -6,6 +6,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'autoplay',
             description: 'Ativa reprodução automática, para caso a sua lista acabe as músicas.',
+            default_permission:false
         })
     }
 

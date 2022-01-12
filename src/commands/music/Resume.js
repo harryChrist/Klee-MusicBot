@@ -6,6 +6,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'resume',
             description: 'Volta a reprodução.',
+            default_permission:false,
         })
     }
 

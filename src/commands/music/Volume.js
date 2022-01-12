@@ -5,6 +5,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'volume',
             description: 'Altera o volúme do meu Som. (Normal: 50%)',
+            default_permission:false,
             options: [
                 {
                     name: 'volume',

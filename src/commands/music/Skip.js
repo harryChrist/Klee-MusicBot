@@ -6,6 +6,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'skip',
             description: 'Pula uma música.',
+            default_permission:false,
         })
     }
 

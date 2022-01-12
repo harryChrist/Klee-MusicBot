@@ -6,6 +6,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'shuffle',
             description: 'Embaralha as músicas.',
+            default_permission:false,
         })
     }
 

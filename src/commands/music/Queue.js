@@ -6,6 +6,7 @@ module.exports = class extends Command {
         super(client, {
             name: 'queue',
             description: 'Lista de reprodução!.',
+            default_permission:false,
         })
     }
 
