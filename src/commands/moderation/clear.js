@@ -23,7 +23,9 @@ module.exports = class extends Command {
             content: "Só posso remover até 100 mensagens..",
             ephemeral: true
         });
-        interaction.channel.bulkDelete(amount);
+        interaction.channel.bulkDelete(amount, true);
+        // You need to set the filterOld parameter to true
+        // to automatically filter out old messages and not throw an error.
 
         //console.log(interaction)
         interaction.reply({

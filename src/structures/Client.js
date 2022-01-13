@@ -39,7 +39,6 @@ module.exports = class extends Client {
 
                 this.commands.push(cmd)
             }
-            console.log(commands)
         }
     }
 

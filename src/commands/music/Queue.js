@@ -13,6 +13,7 @@ module.exports = class extends Command {
     run = async (interaction) => {
         let queue = this.client.distube.getQueue(interaction.member.voice.channel);
         let song = queue.songs[0] // The next song
+        if(!queue) return;
         if(!song) return interaction.reply({
             content:"o Bot não está em reprodução no momento!",
             ephemeral: true
