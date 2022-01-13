@@ -10,8 +10,8 @@ const status = queue =>
 module.exports = (client) => {
     return distube = new DisTube(client, {
         searchSongs: 0,
-        searchCooldown: 30,
-        leaveOnEmpty: false,
+        emptyCooldown: 180,
+        leaveOnEmpty: true,
         leaveOnFinish: false,
         leaveOnStop: true,
         plugins: [new SpotifyPlugin()]
