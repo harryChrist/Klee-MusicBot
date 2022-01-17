@@ -44,6 +44,7 @@ module.exports = (client) => {
             "flanger": "flanger",
             "gate": "agate",
             "haas": "haas",
+            "crystalizer": "crystalizer=i=4",
             "mcompand": "mcompand",
             "myown_purebass": "bass=g=20,dynaudnorm=f=200,asubboost,apulsator=hz=0.08",
         },

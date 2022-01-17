@@ -30,6 +30,7 @@ module.exports = class extends Command {
                         { name: "haas", value: "haas" },
                         {name: "mcompand", value:"mcompand"},
                         {name:"estranhamenteconfortavel", value:"myown_purebass"},
+                        {name:"crystalizer", value:"crystalizer"},
                     ],
                     required: true,
                 }
