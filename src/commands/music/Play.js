@@ -18,6 +18,10 @@ module.exports = class extends Command {
     }
 
     run = async (interaction) => {
+        // Ant Bug
+        if (!interaction.member.voice.channel) return interaction.reply({ content: `Você precisa estar em um canal de voz para utilizar este comando!`, ephemeral: true })
+        if (interaction.guild.me.voice.channel && interaction.guild.me.voice.channel.id !== interaction.member.voice.channel.id) return interaction.reply({ content: `Você precisa estar no mesmo canal de voz que eu para utilizar este comando!`, ephemeral: true })
+
         const music = interaction.options.getString("song")
         if (!music) return interaction.reply({
             content: "Qual música você deseja tocar?",

@@ -1,21 +1,23 @@
 const Command = require('../../structures/Command')
+const Discord = require("discord.js")
 
 module.exports = class extends Command {
     constructor(client) {
         super(client, {
-            name: 'volume',
-            description: 'Altera o volúme do meu Som. (Normal: 50%)',
+            name: 'loop',
+            description: 'Deixa a música ou a playlist em looping.',
             default_permission:false,
             options: [
                 {
-                    name: 'set',
+                    name: 'option',
                     type: 'NUMBER',
-                    description: 'Diga o volume desejado [0 a 100]%. (Normal: 50%)',
+                    description: '0:Desativado, 1:Music, 2:Queue',
                     required: true,
                     min_value: 0,
-                    max_value: 100
+                    max_value: 2
                 }
             ]
+            
         })
     }
 
@@ -24,18 +26,16 @@ module.exports = class extends Command {
         if (!interaction.member.voice.channel) return interaction.reply({ content: `Você precisa estar em um canal de voz para utilizar este comando!`, ephemeral: true })
         if (interaction.guild.me.voice.channel && interaction.guild.me.voice.channel.id !== interaction.member.voice.channel.id) return interaction.reply({ content: `Você precisa estar no mesmo canal de voz que eu para utilizar este comando!`, ephemeral: true })
         
-        const music = interaction.options.getNumber("set")
-        if(music < 0 || music > 100) return interaction.reply({
-            content: "Porfavor, diga um número de 0 a 100!",
-            ephemeral: true
-        });
-        this.client.distube.setVolume(
-            interaction.member.voice.channel, music
-        )
-        //console.log(interaction)
+        const args = interaction.options.getNumber("option")
+        this.client.distube.setRepeatMode(interaction.member.voice.channel, args)
         interaction.reply({
-            content: `Volume alterado para **${music}%**`,
+            content: `Modo de looping setado para: ${args === 0 ? "Off" : (args === 2 ? "All Queue" : "This Song")}`,
             ephemeral: false
         })
+        console.log(args)
+
+        /*mode === 0 ? 1 : (mode === 2 ? 0 : 2)
+        let queue = this.client.distube.getQueue(interaction.member.voice.channel);
+        let mode = queue.repeatMode*/
     }
 }

@@ -28,7 +28,7 @@ module.exports = (client) => {
             },
           },
         searchSongs: 0,
-        emptyCooldown: 120,
+        emptyCooldown: 30,
         leaveOnEmpty: true,
         leaveOnFinish: false,
         leaveOnStop: false,
