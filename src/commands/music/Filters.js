@@ -31,6 +31,8 @@ module.exports = class extends Command {
                         {name: "mcompand", value:"mcompand"},
                         {name:"estranhamenteconfortavel", value:"myown_purebass"},
                         {name:"crystalizer", value:"crystalizer"},
+                        { name: "speed1.5x", value: "speed_15" },
+                        { name: "speed2x", value: "speed_2" },
                     ],
                     required: true,
                 }
