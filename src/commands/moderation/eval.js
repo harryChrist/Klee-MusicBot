@@ -26,7 +26,9 @@ module.exports = class extends Command {
         // Catch the value
         let toEval = interaction.options.getString("code")
         interaction.reply({content:"Processing: ```"+toEval+"```", ephemeral: true})
-
+        let queue = false;
+        if (interaction.member.voice.channel) queue = this.client.distube.getQueue(interaction.member.voice.channel);
+        
         try {
             // Execute
             let evaluated = inspect(eval(toEval))

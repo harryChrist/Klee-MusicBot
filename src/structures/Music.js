@@ -23,15 +23,30 @@ module.exports = (client) => {
             dlChunkSize: 1024 * 1024 * 64,
             filter: "audioonly",
             requestOptions: {
-              //agent,
-               cookie: thecookie,
+                //agent,
+                cookie: thecookie,
             },
-          },
+        },
         searchSongs: 0,
         emptyCooldown: 30,
         leaveOnEmpty: true,
         leaveOnFinish: false,
         leaveOnStop: false,
+        customFilters: {
+            "double": "aecho=0.8:0.88:60:0.4",
+            "fullaudio": "bass=g=7,dynaudnorm=f=200,apulsator=hz=0.08",
+            "cursed": "vibrato=f=6.5,tremolo,aresample=48000,asetrate=48000*1.25",
+            "pitch": "asetrate=48000*1.25,aresample=48000,atempo=0.7",
+            "8D": "apulsator=hz=0.08",
+            "pulsator": "apulsator=hz=1",
+            "subboost": "asubboost",
+            "treble": "treble=g=5",
+            "flanger": "flanger",
+            "gate": "agate",
+            "haas": "haas",
+            "mcompand": "mcompand",
+            "myown_purebass": "bass=g=20,dynaudnorm=f=200,asubboost,apulsator=hz=0.08",
+        },
         plugins: [new SpotifyPlugin()]
     })
         .on("playSong", (queue, song) => {
@@ -41,22 +56,22 @@ module.exports = (client) => {
         })
         .on("addSong", (queue, song) => {
             let MusicEmbed = new Discord.MessageEmbed()
-            .setTitle(song.name)
-            .setURL(song.url)
-            .setThumbnail(song.thumbnail)
-            .setAuthor({name: song.uploader.name, url:song.uploader.url})
-            .addField('Duração', song.formattedDuration, true)
-            .addField('Pedido por', song.user.username, true);
-            queue.textChannel.send({content:`Adicionado a fila na posição ${queue.songs.length}:`, embeds:[MusicEmbed]});
+                .setTitle(song.name)
+                .setURL(song.url)
+                .setThumbnail(song.thumbnail)
+                .setAuthor({ name: song.uploader.name, url: song.uploader.url })
+                .addField('Duração', song.formattedDuration, true)
+                .addField('Pedido por', song.user.username, true);
+            queue.textChannel.send({ content: `Adicionado a fila na posição ${queue.songs.length}:`, embeds: [MusicEmbed] });
         })
         .on("addList", (queue, playlist) => {
             let MusicEmbed = new Discord.MessageEmbed()
-            .setTitle(playlist.name)
-            .setURL(playlist.url)
-            .setThumbnail(playlist.thumbnail)
-            .setDescription(`Pedido por: ${playlist.user}`)
-            .setFooter({text:`Fonte: ${playlist.source}`});
-            queue.textChannel.send({content:`Playlist adicionada a fila:`, embeds:[MusicEmbed]});
+                .setTitle(playlist.name)
+                .setURL(playlist.url)
+                .setThumbnail(playlist.thumbnail)
+                .setDescription(`Pedido por: ${playlist.user}`)
+                .setFooter({ text: `Fonte: ${playlist.source}` });
+            queue.textChannel.send({ content: `Playlist adicionada a fila:`, embeds: [MusicEmbed] });
         })
         .on("error", (channel, e) => {
             //channel.send(`${client.emotes.error} | An error encountered: ${e.toString().slice(0, 1974)}`)
