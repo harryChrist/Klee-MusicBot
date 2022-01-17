@@ -29,10 +29,9 @@ module.exports = class extends Command {
         const args = interaction.options.getNumber("option")
         this.client.distube.setRepeatMode(interaction.member.voice.channel, args)
         interaction.reply({
-            content: `Modo de looping setado para: ${args === 0 ? "Off" : (args === 2 ? "All Queue" : "This Song")}`,
+            content: `Modo de looping setado para: **${args === 0 ? "Off" : (args === 2 ? "All Queue" : "This Song")}**`,
             ephemeral: false
         })
-        console.log(args)
 
         /*mode === 0 ? 1 : (mode === 2 ? 0 : 2)
         let queue = this.client.distube.getQueue(interaction.member.voice.channel);

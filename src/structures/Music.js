@@ -35,19 +35,9 @@ module.exports = (client) => {
         plugins: [new SpotifyPlugin()]
     })
         .on("playSong", (queue, song) => {
-            let msg = `Playing: \`${song.name}\` - \`${song.formattedDuration}\``
-
-
-            let MusicEmbed = new Discord.MessageEmbed()
-            .setTitle(song.name)
-            .setURL(song.url)
-            .setThumbnail(song.thumbnail)
-            .setAuthor({name: song.uploader.name, url:song.uploader.url})
-            .addField('Duração', song.formattedDuration, true)
-            .addField('Pedido por', song.user.username, true);
-            if (song.playlist) msg = `Playlist: ${song.playlist.name}\n${msg}`
-            //queue.textChannel.send({embeds:[MusicEmbed]})
-            //console.log(queue.textChannel.guild.id)
+            let msg = `'${queue.textChannel.guild.name}'(${queue.textChannel.guild.id}) == \`${song.name}\` : \`${song.formattedDuration}\``
+            if (song.playlist) msg = `${msg} Playlist: \`${song.playlist.name}\``
+            console.log(msg)
         })
         .on("addSong", (queue, song) => {
             let MusicEmbed = new Discord.MessageEmbed()
