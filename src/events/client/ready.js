@@ -12,7 +12,7 @@ module.exports = class extends Event {
         this.client.user.setPresence(
             {
                 activities: [{
-                    name: 'Good Songs.',
+                    name: 'Good Songs. /help',
                     type: "LISTENING"
                 }], status: 'online'
             });

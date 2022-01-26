@@ -5,7 +5,7 @@ const { MessageEmbed, MessageActionRow, MessageSelectMenu } = require('discord.j
 module.exports = class extends Command {
     constructor(client) {
         super(client, {
-            name: 'expulsar',
+            name: 'kick',
             description: 'Expulsa um usuário do servidor.',
             options: [
                 {

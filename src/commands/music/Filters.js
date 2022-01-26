@@ -52,7 +52,6 @@ module.exports = class extends Command {
             let quantidade = queue.filters.length;
             for (var i = 0; i < quantidade; i++) {
                 this.client.distube.setFilter(interaction.member.voice.channel, queue.filters[0])
-                console.log(i)
             }
             interaction.reply({
                 content: `Limpando filtros..`,

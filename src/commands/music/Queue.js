@@ -32,7 +32,7 @@ module.exports = class extends Command {
         interaction.reply({
             content: `** Queue List(${ queue.songs.length - 1 }):**\n` + (queue.songs.length - 16 < 0 ? "" : `and ** ${ queue.songs.length - 16 } ** more..\n`) + queue.songs.map((song, id) => `${ id }.${ song.name } - \`${song.formattedDuration}\``).slice(1, 16).reverse().join("\n"),
             embeds: [MusicEmbed],
-            ephemeral: true
+            ephemeral: false
         })
     }
 }

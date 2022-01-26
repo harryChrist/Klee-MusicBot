@@ -17,6 +17,7 @@ module.exports = class extends Client {
 
         this.commands = []
         this.owner = ["205042310851854336"]
+        this.help = {categorys:[], commands:[]}
         this.loadCommands()
         this.loadEvents()
         this.distube = DistubeMusic(this)
@@ -24,22 +25,26 @@ module.exports = class extends Client {
 
     registryCommands() {
         // temporária
-        //this.guilds.cache.get('884413878119829577').commands.set(this.commands)
-        this.application.commands.set(this.commands)
+        this.guilds.cache.get('884413878119829577').commands.set(this.commands)
+        //this.application.commands.set(this.commands)
     }
 
     loadCommands(path = 'src/commands') {
         const categories = readdirSync(path)
+        this.help.categorys = categories
 
         for (const category of categories) {
             const commands = readdirSync(`${path}/${category}`)
 
             for (const command of commands) {
+                if (!command.endsWith(".js")) return; // If dont have .js return
+                if(!command)return;
                 const commandClass = require(join(process.cwd(), `${path}/${category}/${command}`))
                 const cmd = new (commandClass)(this)
-
+                this.help.commands.push({name:cmd.name, description:cmd.description, category:category})
                 this.commands.push(cmd)
             }
+            //console.log(this.help)
         }
     }
 
