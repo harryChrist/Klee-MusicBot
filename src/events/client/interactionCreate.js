@@ -10,7 +10,7 @@ module.exports = class extends Event {
 
     run = async (interaction) => {
         if (interaction.isCommand()) {
-            if(interaction.user.id !== "205042310851854336") return;
+            //if(interaction.user.id !== "205042310851854336") return;
             //if (!interaction.guild) return;
 
             const cmd = this.client.commands.find(c => c.name === interaction.commandName)

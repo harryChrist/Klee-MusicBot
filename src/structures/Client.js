@@ -25,13 +25,13 @@ module.exports = class extends Client {
 
     registryCommands() {
         // temporária
-        this.guilds.cache.get('884413878119829577').commands.set(this.commands)
-        //this.application.commands.set(this.commands)
+        //this.guilds.cache.get('884413878119829577').commands.set(this.commands)
+        this.application.commands.set(this.commands)
     }
 
     loadCommands(path = 'src/commands') {
         const categories = readdirSync(path)
-        this.help.categorys = categories
+        this.help.categorys = categories;
 
         for (const category of categories) {
             const commands = readdirSync(`${path}/${category}`)
