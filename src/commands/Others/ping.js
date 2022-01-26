@@ -3,7 +3,7 @@ const Command = require('../../structures/Command')
 module.exports = class extends Command {
     constructor(client) {
         super(client, {
-            name: 'pong',
+            name: 'ping',
             description: 'Mostra o ping do bot.'
         })
     }
