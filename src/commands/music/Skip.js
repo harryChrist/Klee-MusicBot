@@ -37,7 +37,7 @@ module.exports = class extends Command {
             .addField('Pedido por', song.user.username, true);
         interaction.reply({
             content: "Pulando..",
-            embeds:[MusicEmbed],
+            //embeds:[MusicEmbed],
             ephemeral: false
         })
     }

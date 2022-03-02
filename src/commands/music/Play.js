@@ -27,7 +27,7 @@ module.exports = class extends Command {
             content: "Qual música você deseja tocar?",
             ephemeral: true
         });
-        this.client.distube.playVoiceChannel(
+        this.client.distube.play(
             interaction.member.voice.channel,
             music,
             {

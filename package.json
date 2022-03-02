@@ -15,16 +15,18 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.7.0",
-    "@discordjs/voice": "^0.7.5",
-    "@distube/spotify": "^1.0.0",
+    "@discordjs/voice": "^0.8.0",
+    "@distube/spotify": "^1.2.1",
+    "@distube/yt-dlp": "^1.0.2",
+    "@distube/ytdl-core": "^4.10.0",
     "discord.js": "^13.5.1",
-    "distube": "^3.0.7",
+    "distube": "^3.3.2",
     "dotenv": "^10.0.0",
     "ffmpeg": "^0.0.4",
     "ffmpeg-static": "^4.4.1",
     "https-proxy-agent": "^5.0.0",
     "libsodium-wrappers": "^0.7.9",
     "youtube-dl-exec": "^2.0.2",
-    "ytdl-core": "^4.9.2"
+    "ytdl-core": "^4.10.1"
   }
 }
