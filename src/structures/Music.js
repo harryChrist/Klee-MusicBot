@@ -12,7 +12,7 @@ const status = queue =>
     }\` | Autoplay: \`${queue.autoplay ? "On" : "Off"}\``;
 
 // Cookie
-const thecookie = "GPS=1; YSC=U_dTxFrqlhI; VISITOR_INFO1_LIVE=Do8GW60Qmzs; PREF=tz=America.Sao_Paulo&f6=40000000; SID=GAiPOZl0WGagekRuAxEwmnhlRr01bOP6Qak_Gr9b2ZnaJtoT0tUja3hUEBZcVhduLpZ0yw.; __Secure-1PSID=GAiPOZl0WGagekRuAxEwmnhlRr01bOP6Qak_Gr9b2ZnaJtoTAax8iWLFgNB_OESVI4OriQ.; __Secure-3PSID=GAiPOZl0WGagekRuAxEwmnhlRr01bOP6Qak_Gr9b2ZnaJtoT3hEYJq1VO2dNEc8_dESBJQ.; HSID=A4taMcSSQHxQ5_5-O; SSID=AHIBx7qRVRJyJZlfx; APISID=nMvsBYX6hkICTo0A/AnU5Im8om7bjNmS5l; SAPISID=C8FjLubmq2nfrh54/Ak8m1tmmObkExncDq; __Secure-1PAPISID=C8FjLubmq2n…bkExncDq; LOGIN_INFO=AFmmF2swRQIhAPG7l_N23-tR9pgguh_WCh_OJ5TaMD4HGi-v8ZKHE3zRAiAsEXZthKT8KEgDi5HK3jWqTJ50b8jReNNmrE5MEv_L_w:QUQ3MjNmeUdfX1B5SkVtOFVVMnBYMGxwRGRlSERFNWVheGl3RHdodGZiMFg0aHpHVDM0UGk1Tk5MVUdfRmcyb1pDZkVYS1h1WTB6eUpwekFPbHR1bTJCejBIVldVRHkzVFR3WVFGRkRwcUtZMHEwMktSTzdMRGlwWjFDQTc0SklxVjMzMXR3NnNfVU1tamxhbmhudzVjOXEtcExXSTlkX3lB; SIDCC=AJi4QfGbcQz_Pz0yyUB5prAyo_8sdQ8dNjXFil4beq6D3WG-27flWeI5JCIldsgXrA7d0x6J; __Secure-3PSIDCC=AJi4QfHyShV_6IrOhjqtas5CEvH-7JUnujkSJN8j8SVFUHcMPx52DoXuj_nZis17-Hw3ynBb"
+const thecookie = "VISITOR_INFO1_LIVE=Do8GW60Qmzs; PREF=tz=America.Sao_Paulo&f6=40000000; __Secure-3PSID=GAiPOZl0WGagekRuAxEwmnhlRr01bOP6Qak_Gr9b2ZnaJtoT3hEYJq1VO2dNEc8_dESBJQ.; __Secure-3PAPISID=C8FjLubmq2nfrh54/Ak8m1tmmObkExncDq; __Secure-3PSIDCC=AJi4QfEyFczE1u96bh0j48VbZpyrYtz58V57djxCPuR5BPlkx2l1O03LGJ78XKBWDCHZw9u_; GPS=1; YSC=TpwpOXEcapY; CONSISTENCY=AGDxDePhb1Vcypq_5Gro8-BaPVlnQcYJVYlcAPT75md7QOAL3Ac8oVkERGhaRL4Jl3zwntntYNDx9XKB1uQL48P0ZigWdKrBq7S67RLgC9z8aMANLOFxmvT9zj1P3Z47hmsGHue72Rgvwf5aicR43RA"
 
 // Plugins Players
 const { SpotifyPlugin } = require("@distube/spotify")
