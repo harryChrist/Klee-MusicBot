@@ -76,7 +76,7 @@ module.exports = (client) => {
                 .addField('Duração', song.formattedDuration, true)
                 .addField('Views', formatter.format(song.views), true)
                 .addField('Likes', formatter.format(song.likes), true)
-                queue.textChannel.send({embeds: [MusicEmbed] });
+                //queue.textChannel.send({embeds: [MusicEmbed] });
         })
         .on("addSong", (queue, song) => {
             let MusicEmbed = new Discord.MessageEmbed()
@@ -84,10 +84,11 @@ module.exports = (client) => {
                 .setURL(song.url)
                 .setThumbnail(song.thumbnail)
                 .setAuthor({ name: song.uploader.name, url: song.uploader.url })
+                .setFooter({text: `Pedido por: ${song.user.username}#${song.user.discriminator}`, iconURL: song.user.displayAvatarURL()})
                 .addField('Duração', song.formattedDuration, true)
                 .addField('Views', formatter.format(song.views), true)
-                .addField('Pedido por', song.user.username, true);
-            queue.textChannel.send({ content: `${song.user}, ${"``"}${song.name}${"``"} foi adicionado na posição **${queue.songs.length}**.`});
+                .addField('Likes', formatter.format(song.likes), true)
+            queue.textChannel.send({ content: `${song.user}, ${"``"}${song.name}${"``"} foi adicionado na posição **${queue.songs.length}**.`, embeds:[MusicEmbed]});
         })
         .on("addList", (queue, playlist) => {
             let MusicEmbed = new Discord.MessageEmbed()
