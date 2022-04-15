@@ -12,7 +12,7 @@ const status = queue =>
     }\` | Autoplay: \`${queue.autoplay ? "On" : "Off"}\``;
 
 // Cookie
-const thecookie = "VISITOR_INFO1_LIVE=Do8GW60Qmzs; PREF=tz=America.Sao_Paulo&f6=40000000; __Secure-3PSID=GAiPOZl0WGagekRuAxEwmnhlRr01bOP6Qak_Gr9b2ZnaJtoT3hEYJq1VO2dNEc8_dESBJQ.; __Secure-3PAPISID=C8FjLubmq2nfrh54/Ak8m1tmmObkExncDq; __Secure-3PSIDCC=AJi4QfEyFczE1u96bh0j48VbZpyrYtz58V57djxCPuR5BPlkx2l1O03LGJ78XKBWDCHZw9u_; GPS=1; YSC=TpwpOXEcapY; CONSISTENCY=AGDxDePhb1Vcypq_5Gro8-BaPVlnQcYJVYlcAPT75md7QOAL3Ac8oVkERGhaRL4Jl3zwntntYNDx9XKB1uQL48P0ZigWdKrBq7S67RLgC9z8aMANLOFxmvT9zj1P3Z47hmsGHue72Rgvwf5aicR43RA"
+const thecookie = "GPS=1; YSC=YOWB3l3pCew; VISITOR_INFO1_LIVE=0GE1ZTt3S80; PREF=tz=America.Sao_Paulo&f6=40000000; CONSISTENCY=AGDxDeO6OZhGTJIEz710Q_cvdC5Jrzt-uM1Qvbf58hNTxDHPpReI7-Cb1eN3Nb64ly9xhs3Vx48adCHZuEqXrSh2BeOdifoDn-Gt3bt4PFhB7ju7P2Wn1EcTZiGNVCqcSgpzIB7YmvncI_b-zj-Ogl4"
 
 // Plugins Players
 const { SpotifyPlugin } = require("@distube/spotify")
