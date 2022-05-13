@@ -99,7 +99,7 @@ module.exports = (client) => {
             queue.textChannel.send({ content: `Playlist adicionada a fila:`, embeds: [MusicEmbed] });
         })
         .on("error", (channel, e) => {
-            channel.send(`${client.emotes.error} | An error encountered: ${e.toString().slice(0, 1974)}`)
+            channel.send(`:x:  | An error encountered: ${e.toString().slice(0, 1974)}`)
             console.error(e)
         })
 }
