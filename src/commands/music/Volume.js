@@ -24,6 +24,14 @@ module.exports = class extends Command {
         if (!interaction.member.voice.channel) return interaction.reply({ content: `Você precisa estar em um canal de voz para utilizar este comando!`, ephemeral: true })
         if (interaction.guild.me.voice.channel && interaction.guild.me.voice.channel.id !== interaction.member.voice.channel.id) return interaction.reply({ content: `Você precisa estar no mesmo canal de voz que eu para utilizar este comando!`, ephemeral: true })
         
+        let queue = this.client.distube.getQueue(interaction.member.voice.channel);
+        if (!queue) {
+            return interaction.reply({
+                content: `Não tem nada tocando no momento!`,
+                ephemeral: true
+            });
+        }
+        
         const music = interaction.options.getNumber("set")
         if(music < 0 || music > 100) return interaction.reply({
             content: "Porfavor, diga um número de 0 a 100!",

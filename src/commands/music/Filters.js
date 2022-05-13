@@ -48,6 +48,12 @@ module.exports = class extends Command {
 
         const args = interaction.options.getString("set")
         let queue = this.client.distube.getQueue(interaction.member.voice.channel);
+        if (!queue) {
+            return interaction.reply({
+                content: `Não tem nada tocando no momento!`,
+                ephemeral: true
+            });
+        }
         if (args == "clear") {
             let quantidade = queue.filters.length;
             for (var i = 0; i < quantidade; i++) {

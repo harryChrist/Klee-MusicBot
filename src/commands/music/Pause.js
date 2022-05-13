@@ -33,7 +33,7 @@ module.exports = class extends Command {
             return interaction.reply({
                 content: `Não tem nada tocando no momento!`,
                 ephemeral: true
-            });;
+            });
         }
     }
 }
