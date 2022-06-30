@@ -76,7 +76,7 @@ module.exports = (client) => {
                 .addField('Duração', song.formattedDuration, true)
                 .addField('Views', formatter.format(song.views), true)
                 .addField('Likes', formatter.format(song.likes), true)
-                queue.textChannel.send({embeds: [MusicEmbed] });
+                queue.textChannel.send({content:'Tocando agora:', embeds: [MusicEmbed] });
         })
         .on("addSong", (queue, song) => {
             let MusicEmbed = new Discord.MessageEmbed()
