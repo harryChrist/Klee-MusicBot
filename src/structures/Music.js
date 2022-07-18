@@ -12,7 +12,7 @@ const status = queue =>
     }\` | Autoplay: \`${queue.autoplay ? "On" : "Off"}\``;
 
 // Cookie
-const thecookie = "VISITOR_INFO1_LIVE=0GE1ZTt3S80; PREF=tz=America.Sao_Paulo&f6=40000000; GPS=1; YSC=yFZadZKO_H0; CONSISTENCY=AGDxDeMK-PVHXAAdY7Kpf4Stz6c89s9SyhBejSFZKIpFhTb-tXKqGHvIOIsMs5nG5QDNSXXxS6CHuQV4o6frOUIwM5hRTHFLnmxOx41A2dF5WovMNxvqqznFKzwx_P5IIvEZe2hGNgRwNP1D-EcCDA; SID=Jghl1yr2kCUbhcpeeFg0saApGRT-uPv7dBkt5zq1KMJcbpGPlNeW27qlr-32eXX9KuTlWg.; __Secure-1PSID=Jghl1yr2kCUbhcpeeFg0saApGRT-uPv7dBkt5zq1KMJcbpGPN2n9ZvarSthkLTalqcRI_w.; __Secure-3PSID=Jghl1yr2kCUbhcpeeFg0saApGRT-uPv7dBkt5zq1KMJcbpGPfXOvA1eGOG7qf8sCzctVtw.; …J2kXFX; LOGIN_INFO=AFmmF2swRAIgJrnhzYtfmzBpKKXi87EmQpNM7KRk3L9ZNto-LGALT4kCIFL9wo1-vWqyrW_tYHBAITyfWtqsxjInfRre8oAx0yok:QUQ3MjNmemxiSTYxdU04WTJLYVRsTUFYd0JTdm9EdzE0cFl4TTZTU2V6dWNCVXlhWTA2Q20tS3NKc1BRVVp5RnFDX2hKaVNCc0xLX3FBSFdWSkRHSjFMWF9GZVFieXJfbF9TSThVQm44ZFRXcllDTzZnS3B2X2pwNjFuMHNzejUtbFN4UGlqR3VVYnNmNzQ3bEJYaVBidUZZbmRpWlpaLUxR; SIDCC=AJi4QfHWqPkrFE6CpIzffghfjOkoDMmIVYTHjXWYUuZ1epnYSoaa9Yc2nhPMmBPFxTuT8lvbhg; __Secure-3PSIDCC=AJi4QfFGwSEji4GqzA2bSX2fy_8y9FIstaWccowcZU5aWHt7MdN5vL5NJ8jVNA0tmAexBxljcQ"
+const thecookie = "GPS=1; YSC=UzmnlR_RJRs; VISITOR_INFO1_LIVE=J4hpsR8_tpI; PREF=tz=America.Sao_Paulo&f6=40000000; CONSISTENCY=AGXVzq9SZXrosveqXTxf7tdUxMBnuF9AMkMstTwFzMI85fQNPD8jK1sgnEmBgZ_LB3xRneOZn97XL_X3tIfzLldrv2lQQBrvXz2VDsuwAm0HyIJokf9JA5UB1WIiIMKE8426My-ryrDBF_cS2fPwaos"
 
 // Plugins Players
 const { SpotifyPlugin } = require("@distube/spotify")
